@@ -244,11 +244,54 @@ individuals and organizations. Licensed under MIT.
 
 ## Quick start
 
-Material for MkDocs can be installed with `pip`:
+### This section is added  by Hari Thapliyal
+
+```sh
+### Create a venv
+python -m venv venc
+
+### activate venv
+venv\Script\activate 
+
+### install these packages 
+
+#### Essential MkDocs & Material Theme
+
+pip install mkdocs
+pip install mkdocs-material
+```
+
+#### Additional MkDocs Plugins
+``` sh
+pip install mkdocs-awesome-pages-plugin mkdocs-blog-plugin mkdocs-git-revision-date-localized-plugin mkdocs-redirects mkdocs-glightbox
+pip install mkdocs-minify-plugin
+
+pip install mkdocs-macros-plugin       # For Jinja templating in Markdown
+pip install mkdocs-minify-plugin       # To minify HTML output
+pip install mkdocs-awesome-pages-plugin  # For auto-generating navigation
+pip install mkdocs-blog-plugin         # (Not needed if using Material's built-in blog feature)
+pip install mkdocs-git-revision-date-localized-plugin  # If you want Git commit dates in docs
+pip install mkdocs-redirects           # If handling redirects
+pip install mkdocs-glightbox            # If using image lightbox feature
+
+#### Jinja & Templating Dependencies
+pip install Jinja2 PyYAML markdown
+
+#### Ensure Everything is Updated
+pip install --upgrade mkdocs-material mkdocs mkdocs-macros-plugin
+
+#### To check everything installed:
+pip freeze | grep mkdocs
+
+#### for Github Deployment (online)
+mkdocs gh-deploy
+```
+
+<!-- Material for MkDocs can be installed with `pip`:
 
 ``` sh
 pip install mkdocs-material
-```
+``` -->
 
 Add the following lines to `mkdocs.yml`:
 
